@@ -1,6 +1,7 @@
 import React from 'react';
 import * as ml5 from 'ml5';
-const irisesModel = 'http://localhost:8080/models/irises';
+// const irisesModel = 'http://localhost:8080/models/irises';
+const irisesModel = 'https://derivativ.herokuapp.com/models/irises';
 
 let style;
 let input = document.getElementById('inputImg');
