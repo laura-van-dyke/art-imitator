@@ -1,7 +1,12 @@
 import React from 'react';
 import * as ml5 from 'ml5';
+
+const dev = process.env.NODE_ENV !== 'production';
+const m = dev
+  ? 'http://localhost:8080/models/irises'
+  : 'https://derivativ.herokuapp.com/models/irises';
 // const irisesModel = 'http://localhost:8080/models/irises';
-const irisesModel = 'https://derivativ.herokuapp.com/models/irises';
+//const irisesModel = 'https://derivativ.herokuapp.com/models/irises';
 
 let style;
 let input = document.getElementById('inputImg');
@@ -17,9 +22,9 @@ let newPhoto = document.getElementById('newPhoto');
 //     newPhoto.appendChild(newImg);
 //   });
 const applyModel = async () => {
-  const image = document.getElementById('inputImg');
+  const image = document.getElementById('userImg');
   const newPhoto = document.getElementById('newPhoto');
-  const model = await ml5.styleTransfer(irisesModel);
+  const model = await ml5.styleTransfer(m);
   const result = await model.transfer(image);
   console.log('ok');
   const newImg = new Image(500, 266);
@@ -30,7 +35,9 @@ const applyModel = async () => {
 class Test extends React.Component {
   constructor() {
     super();
+    this.state = { file: null };
     this.clickHandler = this.clickHandler.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   clickHandler(evt) {
@@ -44,11 +51,20 @@ class Test extends React.Component {
     //     newPhoto.appendChild(newImage1);
     //   });
   }
+  handleChange(event) {
+    this.setState({
+      file: URL.createObjectURL(event.target.files[0]),
+    });
+  }
 
   render() {
     return (
       <>
         <h1>Deep Neural Network and van Gogh's Irises</h1>
+        <div>
+          <input type="file" onChange={this.handleChange} />
+          <img id="userImg" src={this.state.file} />
+        </div>
         <p>Inspiration Image</p>
         <img
           className="irises"
