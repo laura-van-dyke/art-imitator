@@ -22,7 +22,7 @@ let newPhoto = document.getElementById('newPhoto');
 //     newPhoto.appendChild(newImg);
 //   });
 const applyModel = async () => {
-  const image = document.getElementById('userImg');
+  const image = document.getElementById('inputImg');
   const newPhoto = document.getElementById('newPhoto');
   const model = await ml5.styleTransfer(m);
   const result = await model.transfer(image);

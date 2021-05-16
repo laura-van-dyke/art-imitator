@@ -13,6 +13,7 @@ label {
 nav a {
   display: inline-block;
   margin: 1em;
+  color: purple;
 }
 
 form div {
@@ -20,6 +21,39 @@ form div {
   display: inline-block;
 }
 
-.irises {
+.painting {
   max-width: 500px;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1%;
+}
+
+.content {
+  padding: 0 1%;
+}
+
+.nav-wrapper {
+  align-items: flex-end;
+}
+
+.title {
+  font-style: italic;
+  margin-top: 0;
+  font-weight: normal;
+}
+
+.artist {
+  margin-bottom: 0;
 }
