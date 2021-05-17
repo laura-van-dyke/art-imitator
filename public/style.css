@@ -21,7 +21,7 @@ form div {
   display: inline-block;
 }
 
-.painting {
+.paintingImg {
   max-width: 500px;
 }
 
@@ -59,7 +59,7 @@ header {
   margin-bottom: 0;
 }
 
-.userImg {
+.userInput {
   border: dashed black;
   max-width: 500px;
   min-height: 200px;
