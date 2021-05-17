@@ -57,18 +57,26 @@ class Transformation extends React.Component {
 
     return (
       <div className="content">
-        <div>
+        <div className="placard">
           <h1 className="artist">{painting.artist}</h1>
           <h1 className="title">{painting.title}</h1>
         </div>
-        <img className="painting" src={painting.url} />
-        <div>
-          <input type="file" onChange={this.inputFile} />
-          <img id="userImg" width="500px" src={this.state.file} />
+        <div className="sourceImages">
+          <img className="paintingImg" src={painting.url} />
+          <div className="userInput">
+            <input type="file" onChange={this.inputFile} />
+            <img
+              id="userImg"
+              width="500px"
+              className="userImg"
+              src={this.state.file}
+            />
+            <button type="button" onClick={this.transformImage}>
+              Transform Image
+            </button>
+          </div>
         </div>
-        <button type="button" onClick={this.transformImage}>
-          Try it out
-        </button>
+
         <p>Reimagined Image</p>
         <div id="transformed"></div>
       </div>
