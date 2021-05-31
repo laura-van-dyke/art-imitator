@@ -62,6 +62,9 @@ header {
 .userInput {
   border: dashed black;
   max-width: 500px;
-  min-height: 200px;
   float: right;
+}
+
+.sourceImages {
+  display: flex;
 }
