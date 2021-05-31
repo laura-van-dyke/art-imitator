@@ -6,12 +6,14 @@ const paintings = {
     artist: 'Vincent van Gogh',
     title: 'Irises',
     year: 1889,
+    class: 'irises',
     url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Irises-Vincent_van_Gogh.jpg/1280px-Irises-Vincent_van_Gogh.jpg',
   },
   judgment: {
     artist: 'Wassily Kandinsky',
-    title: 'The Last Judgement',
+    title: 'The Last Judgment',
     year: 1912,
+    class: 'judgment',
     url: 'https://www.wassilykandinsky.net/images/works/332.jpg?version=7',
   },
 };
@@ -37,17 +39,22 @@ class Transformation extends React.Component {
   }
 
   inputFile(event) {
-    this.setState({
-      file: URL.createObjectURL(event.target.files[0]),
-    });
+    this.setState(
+      {
+        file: URL.createObjectURL(event.target.files[0]),
+      }
+      // () => setTimeout(this.transformImage, 500)
+    );
   }
 
   async transformImage() {
-    const image = document.getElementById('userImg');
+    let image = document.getElementById('userImg');
+    let width = image.width;
+    let height = image.height;
     const transformed = document.getElementById('transformed');
     const model = this.state.model;
     const result = await model.transfer(image);
-    const newImg = new Image(500, 266);
+    const newImg = new Image(width, height);
     newImg.src = result.src;
     transformed.appendChild(newImg);
   }
@@ -64,21 +71,27 @@ class Transformation extends React.Component {
         <div className="sourceImages">
           <img className="paintingImg" src={painting.url} />
           <div className="userInput">
-            <input type="file" onChange={this.inputFile} />
-            <img
-              id="userImg"
-              width="500px"
-              className="userImg"
-              src={this.state.file}
-            />
-            <button type="button" onClick={this.transformImage}>
-              Transform Image
-            </button>
+            {!this.state.file ? (
+              <>
+                <h3>Upload an Image</h3>
+                <input type="file" onChange={this.inputFile} />
+              </>
+            ) : (
+              <img
+                id="userImg"
+                className={painting.class}
+                src={this.state.file}
+                onLoad={this.transformImage}
+              />
+            )}
           </div>
         </div>
-
-        <p>Reimagined Image</p>
-        <div id="transformed"></div>
+        <div className="reveal">
+          {/* <button type="button" onClick={this.transformImage}>
+            Transform Image
+          </button> */}
+          <div id="transformed"></div>
+        </div>
       </div>
     );
   }

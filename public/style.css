@@ -62,9 +62,29 @@ header {
 .userInput {
   border: dashed black;
   max-width: 500px;
-  float: right;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .sourceImages {
   display: flex;
+  justify-content: space-evenly;
+}
+
+.irises {
+  max-width: 500px;
+  max-height: 382.33px;
+}
+
+.judgment {
+  max-width: 500px;
+  max-height: 372.33px;
+}
+
+.reveal {
+  display: flex;
+  justify-content: center;
 }
