@@ -39,12 +39,10 @@ class Transformation extends React.Component {
   }
 
   inputFile(event) {
-    this.setState(
-      {
-        file: URL.createObjectURL(event.target.files[0]),
-      },
-      () => setTimeout(this.transformImage, 1000)
-    );
+    this.setState({
+      file: URL.createObjectURL(event.target.files[0]),
+    });
+    setTimeout(this.transformImage, 1000);
   }
 
   async transformImage() {
@@ -61,6 +59,7 @@ class Transformation extends React.Component {
 
   render() {
     const painting = paintings[this.props.painting];
+    console.log(this.state);
 
     return (
       <div className="content">
