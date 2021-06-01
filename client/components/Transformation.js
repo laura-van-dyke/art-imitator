@@ -22,35 +22,46 @@ class Transformation extends React.Component {
   constructor() {
     super();
     this.state = {
-      model: null,
+      painting: null,
       file: null,
+      // model: null,
     };
     this.inputFile = this.inputFile.bind(this);
+    //this.loadModel = this.loadModel.bind(this);
     this.transformImage = this.transformImage.bind(this);
   }
 
-  async componentDidMount() {
+  componentDidMount() {
     const dev = process.env.NODE_ENV !== 'production';
     const painting = dev
       ? `http://localhost:8080/models/${this.props.painting}`
       : `https://art-imitator.herokuapp.com/models/${this.props.painting}`;
-    const model = await ml5.styleTransfer(painting);
-    this.setState({ model: model });
+    // const model = await ml5.styleTransfer(painting);
+    this.setState({ painting: painting });
   }
 
   inputFile(event) {
-    this.setState({
-      file: URL.createObjectURL(event.target.files[0]),
-    });
-    setTimeout(this.transformImage, 1000);
+    this.setState(
+      {
+        file: URL.createObjectURL(event.target.files[0]),
+      },
+      this.transformImage
+    );
+    // setTimeout(this.transformImage, 1000);
   }
 
+  // async loadModel() {
+  //   const model = await ml5.styleTransfer(this.state.painting);
+  //   this.setState({ model: model });
+  // }
+
   async transformImage() {
+    const model = await ml5.styleTransfer(this.state.painting);
     let image = document.getElementById('userImg');
     let width = image.width;
     let height = image.height;
     const transformed = document.getElementById('transformed');
-    const model = this.state.model;
+    //const model = this.state.model;
     const result = await model.transfer(image);
     const newImg = new Image(width, height);
     newImg.src = result.src;
