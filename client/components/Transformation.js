@@ -43,7 +43,7 @@ class Transformation extends React.Component {
       {
         file: URL.createObjectURL(event.target.files[0]),
       },
-      () => setTimeout(this.transformImage, 500)
+      () => setTimeout(this.transformImage, 1000)
     );
   }
 
