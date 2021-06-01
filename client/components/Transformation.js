@@ -33,7 +33,7 @@ class Transformation extends React.Component {
     const dev = process.env.NODE_ENV !== 'production';
     const painting = dev
       ? `http://localhost:8080/models/${this.props.painting}`
-      : `https://derivativ.herokuapp.com/models/${this.props.painting}`;
+      : `https://art-imitator.herokuapp.com/models/${this.props.painting}`;
     const model = await ml5.styleTransfer(painting);
     this.setState({ model: model });
   }
@@ -42,8 +42,8 @@ class Transformation extends React.Component {
     this.setState(
       {
         file: URL.createObjectURL(event.target.files[0]),
-      }
-      // () => setTimeout(this.transformImage, 500)
+      },
+      () => setTimeout(this.transformImage, 500)
     );
   }
 
@@ -81,15 +81,11 @@ class Transformation extends React.Component {
                 id="userImg"
                 className={painting.class}
                 src={this.state.file}
-                onLoad={this.transformImage}
               />
             )}
           </div>
         </div>
         <div className="reveal">
-          {/* <button type="button" onClick={this.transformImage}>
-            Transform Image
-          </button> */}
           <div id="transformed"></div>
         </div>
       </div>
