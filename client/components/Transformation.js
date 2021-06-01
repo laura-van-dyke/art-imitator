@@ -42,8 +42,8 @@ class Transformation extends React.Component {
     this.setState(
       {
         file: URL.createObjectURL(event.target.files[0]),
-      }
-      // () => setTimeout(this.transformImage, 500)
+      },
+      () => setTimeout(this.transformImage, 500)
     );
   }
 
@@ -81,15 +81,11 @@ class Transformation extends React.Component {
                 id="userImg"
                 className={painting.class}
                 src={this.state.file}
-                onLoad={this.transformImage}
               />
             )}
           </div>
         </div>
         <div className="reveal">
-          {/* <button type="button" onClick={this.transformImage}>
-            Transform Image
-          </button> */}
           <div id="transformed"></div>
         </div>
       </div>
