@@ -1,22 +1,6 @@
 import React from 'react';
 import * as ml5 from 'ml5';
-
-const paintings = {
-  irises: {
-    artist: 'Vincent van Gogh',
-    title: 'Irises',
-    year: 1889,
-    class: 'irises',
-    url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Irises-Vincent_van_Gogh.jpg/1280px-Irises-Vincent_van_Gogh.jpg',
-  },
-  judgment: {
-    artist: 'Wassily Kandinsky',
-    title: 'The Last Judgment',
-    year: 1912,
-    class: 'judgment',
-    url: 'https://www.wassilykandinsky.net/images/works/332.jpg?version=7',
-  },
-};
+import paintings from '../paintings';
 
 class Transformation extends React.Component {
   constructor() {
@@ -89,7 +73,7 @@ class Transformation extends React.Component {
             ) : (
               <img
                 id="userImg"
-                className={painting.class}
+                className={painting.shorthand}
                 src={this.state.file}
               />
             )}
