@@ -10,7 +10,7 @@ class Home extends React.Component {
           works of art
         </h2>
         <Link to={`/paintings`}>
-          <h2 className="selectPainting">Select a painting</h2>
+          <h3 className="selectPainting">Select a painting</h3>
         </Link>
 
         <div className="homeRow">
