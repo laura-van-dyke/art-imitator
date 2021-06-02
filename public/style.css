@@ -4,6 +4,7 @@ body {
 
 a {
   text-decoration: none;
+  color: purple;
 }
 
 label {
@@ -92,6 +93,11 @@ header {
 .redpots {
   max-width: 500px;
   max-height: 392.5;
+}
+
+.bathers {
+  max-width: 500px;
+  max-height: 347.27px;
 }
 
 .reveal {

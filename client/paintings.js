@@ -27,4 +27,11 @@ export default {
     shorthand: 'redpots',
     url: 'https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fcom.ft.imagepublish.prod.s3.amazonaws.com%2F9ede0e16-ef2c-11e6-ba01-119a44939bb6?fit=scale-down&source=next&width=600',
   },
+  bathers: {
+    artist: 'Paul Cézanne',
+    title: 'Bathers',
+    year: 1905,
+    shorthand: 'bathers',
+    url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Les_Grandes_Baigneuses%2C_par_Paul_C%C3%A9zanne%2C_National_Gallery%2C_Yorck.jpg/1280px-Les_Grandes_Baigneuses%2C_par_Paul_C%C3%A9zanne%2C_National_Gallery%2C_Yorck.jpg',
+  },
 };
