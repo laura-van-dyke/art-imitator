@@ -20,13 +20,13 @@ export const paintings = {
     shorthand: 'millstone',
     url: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Paul_Cezanne-_Well%2C_Millstone_and_Cistern_Under_Trees.JPG',
   },
-  // adparnassum: {
-  //   artist: 'Paul Klee',
-  //   title: 'Ad Parnassum',
-  //   year: 1932,
-  //   shorthand: 'adparnassum',
-  //   url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Paul_Klee_-_Ad_Parnassum.jpg/1024px-Paul_Klee_-_Ad_Parnassum.jpg',
-  // },
+  adparnassum: {
+    artist: 'Paul Klee',
+    title: 'Ad Parnassum',
+    year: 1932,
+    shorthand: 'adparnassum',
+    url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Paul_Klee_-_Ad_Parnassum.jpg/1024px-Paul_Klee_-_Ad_Parnassum.jpg',
+  },
 };
 
 export const badPaintings = {

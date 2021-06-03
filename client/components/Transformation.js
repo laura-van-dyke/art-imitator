@@ -1,6 +1,6 @@
 import React from 'react';
 import * as ml5 from 'ml5';
-import { paintings } from '../paintings';
+import { paintings, badPaintings } from '../paintings';
 
 class Transformation extends React.Component {
   constructor() {
@@ -60,7 +60,8 @@ class Transformation extends React.Component {
   }
 
   render() {
-    const painting = paintings[this.props.painting];
+    const painting =
+      paintings[this.props.painting] || badPaintings[this.props.painting];
 
     return (
       <div className="content">
