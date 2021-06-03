@@ -11,7 +11,7 @@ class Navbar extends React.Component {
         </Link>
         <div className="flex-column nav-wrapper">
           <nav>
-            <Link to="/">Home</Link>
+            <Link to="/about">About</Link>
             <Link to="/paintings">Paintings</Link>
           </nav>
         </div>
