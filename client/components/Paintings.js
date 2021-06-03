@@ -13,7 +13,7 @@ class Paintings extends React.Component {
           <br />
           Select a painting to begin.
         </h3>
-        <div className="plants-container">
+        <div className="paintings-container">
           {Object.keys(paintings).map((painting) => {
             return <Painting key={painting} painting={paintings[painting]} />;
           })}

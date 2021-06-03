@@ -32,7 +32,7 @@ class About extends React.Component {
             and not every model produces satisfying results. Check out some of
             the rejected models below.
           </h3>
-          <div className="plants-container">
+          <div className="about-container">
             {Object.keys(badPaintings).map((painting) => {
               return (
                 <Painting key={painting} painting={badPaintings[painting]} />
