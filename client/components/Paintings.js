@@ -6,7 +6,7 @@ class Paintings extends React.Component {
   render() {
     return (
       <>
-        <h3>
+        <h3 className="homeText">
           Art Imitator reimagines your photographs using machine learning models
           trained on works of art.
           <br />
