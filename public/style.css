@@ -130,6 +130,18 @@ header {
   border: black;
 }
 
+.header img {
+  float: right;
+  background: #555;
+}
+
+.header h4 {
+}
+
+.aboutBody {
+  width: 50%;
+}
+
 /* from gshopper */
 
 .card {

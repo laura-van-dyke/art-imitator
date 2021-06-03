@@ -1,6 +1,6 @@
 import React from 'react';
 import * as ml5 from 'ml5';
-import paintings from '../paintings';
+import { paintings } from '../paintings';
 
 class Transformation extends React.Component {
   constructor() {
