@@ -105,6 +105,11 @@ header {
   max-height: 391.06;
 }
 
+.adparnassum {
+  max-width: 500px;
+  max-height: 393.55px;
+}
+
 .reveal {
   display: flex;
   justify-content: center;
@@ -123,6 +128,18 @@ header {
 
 .selectPainting {
   border: black;
+}
+
+.header img {
+  float: right;
+  background: #555;
+}
+
+.header h4 {
+}
+
+.aboutBody {
+  width: 50%;
 }
 
 /* from gshopper */

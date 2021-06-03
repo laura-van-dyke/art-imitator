@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Painting(props) {
   const { artist, shorthand, url } = props.painting;
-  console.log(props);
+  props;
   return (
     <Link className="card" to={`/paintings/${shorthand}`}>
       <div>
