@@ -8,9 +8,11 @@ class Transformation extends React.Component {
     this.state = {
       painting: null,
       file: null,
+      status: '',
       // model: null,
     };
     this.inputFile = this.inputFile.bind(this);
+    this.photoLoaded = this.photoLoaded.bind(this);
     //this.loadModel = this.loadModel.bind(this);
     this.transformImage = this.transformImage.bind(this);
   }
@@ -34,6 +36,10 @@ class Transformation extends React.Component {
     // setTimeout(this.transformImage, 1000);
   }
 
+  photoLoaded() {
+    this.setState({ status: 'loading' });
+  }
+
   // async loadModel() {
   //   const model = await ml5.styleTransfer(this.state.painting);
   //   this.setState({ model: model });
@@ -50,11 +56,11 @@ class Transformation extends React.Component {
     const newImg = new Image(width, height);
     newImg.src = result.src;
     transformed.appendChild(newImg);
+    this.setState({ status: '' });
   }
 
   render() {
     const painting = paintings[this.props.painting];
-    console.log(this.state);
 
     return (
       <div className="content">
@@ -75,11 +81,19 @@ class Transformation extends React.Component {
                 id="userImg"
                 className={painting.shorthand}
                 src={this.state.file}
+                onLoad={this.photoLoaded}
               />
             )}
           </div>
         </div>
         <div className="reveal">
+          {this.state.status === 'loading' ? (
+            <div>
+              <h3>Generating new image...</h3>
+            </div>
+          ) : (
+            <div></div>
+          )}
           <div id="transformed"></div>
         </div>
       </div>

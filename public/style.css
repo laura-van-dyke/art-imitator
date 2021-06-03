@@ -105,6 +105,11 @@ header {
   max-height: 391.06;
 }
 
+.adparnassum {
+  max-width: 500px;
+  max-height: 393.55px;
+}
+
 .reveal {
   display: flex;
   justify-content: center;

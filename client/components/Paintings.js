@@ -6,11 +6,17 @@ class Paintings extends React.Component {
   render() {
     console.log(Object.keys(paintings));
     return (
-      <div className="plants-container">
-        {Object.keys(paintings).map((painting) => {
-          return <Painting key={painting} painting={paintings[painting]} />;
-        })}
-      </div>
+      <>
+        <h3>
+          Select a painting to have your photographs reimagined by a deep neural
+          network
+        </h3>
+        <div className="plants-container">
+          {Object.keys(paintings).map((painting) => {
+            return <Painting key={painting} painting={paintings[painting]} />;
+          })}
+        </div>
+      </>
     );
   }
 }
