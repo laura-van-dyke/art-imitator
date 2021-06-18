@@ -15,7 +15,7 @@ class About extends React.Component {
           <h3 className="aboutBody">
             Art Imitator uses machine learning models to incorporate artistic
             elements into plain images. These models were trained on particular
-            paintings using a deep neural network.
+            paintings using Logan Engstrom's style transfer deep neural network.
           </h3>
         </div>
         <div className="homeRow">

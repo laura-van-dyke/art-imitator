@@ -135,15 +135,18 @@ header {
   background: #555;
 }
 
-.header h4 {
-}
-
 .aboutBody {
-  width: 50%;
+  width: 75%;
+  font-weight: normal;
 }
 
 .homeText {
   margin-left: 21.44px;
+}
+
+.homeDescr {
+  margin-left: 21.44px;
+  font-weight: normal;
 }
 
 /* painting cards for Paintings */
