@@ -1,10 +1,12 @@
 body {
   font-family: sans-serif;
+  color: grey;
+  background-color: black;
 }
 
 a {
   text-decoration: none;
-  color: purple;
+  color: skyblue;
 }
 
 label {
@@ -14,7 +16,7 @@ label {
 nav a {
   display: inline-block;
   margin: 1em;
-  color: purple;
+  color: skyblue;
 }
 
 form div {
@@ -39,7 +41,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 1%;
-  border: double black thick;
+  border: double grey;
 }
 
 .content {
@@ -61,7 +63,7 @@ header {
 }
 
 .userInput {
-  border: dashed black;
+  border: dashed grey;
   max-width: 500px;
   width: 500px;
   display: flex;
@@ -152,12 +154,12 @@ header {
 /* painting cards for Paintings */
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
   transition: 0.3s;
-  width: 30%;
+  width: 45%;
   text-align: center;
-  padding: 10px;
-  margin: 2vw;
+  padding: 0.1%;
+  margin: 0.1%;
 }
 
 .card:hover {
