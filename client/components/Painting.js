@@ -7,7 +7,7 @@ function Painting(props) {
   return (
     <Link className="card" to={`/paintings/${shorthand}`}>
       <div>
-        <img src={url} style={{ width: '100%' }} />
+        <img className="cardImg" src={url} style={{ width: '100%' }} />
         {/* <div className="container">
           <h4>
             <b>{artist}</b>

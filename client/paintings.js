@@ -4,14 +4,14 @@ export const paintings = {
     title: 'Irises',
     year: 1889,
     shorthand: 'irises',
-    url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Irises-Vincent_van_Gogh.jpg/1280px-Irises-Vincent_van_Gogh.jpg',
+    url: 'https://live.staticflickr.com/65535/51285619778_301713963e_b.jpg',
   },
   adparnassum: {
     artist: 'Paul Klee',
     title: 'Ad Parnassum',
     year: 1932,
     shorthand: 'adparnassum',
-    url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Paul_Klee_-_Ad_Parnassum.jpg/1024px-Paul_Klee_-_Ad_Parnassum.jpg',
+    url: 'https://live.staticflickr.com/65535/51285626538_9ef8249f54_b.jpg',
   },
   judgment: {
     artist: 'Wassily Kandinsky',
@@ -25,7 +25,7 @@ export const paintings = {
     title: 'Well, Millstone and Cistern Under Trees',
     year: 1892,
     shorthand: 'millstone',
-    url: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Paul_Cezanne-_Well%2C_Millstone_and_Cistern_Under_Trees.JPG',
+    url: 'https://live.staticflickr.com/65535/51285612518_49d3ccc0e4_b.jpg',
   },
 };
 
