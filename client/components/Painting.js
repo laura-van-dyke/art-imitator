@@ -8,11 +8,11 @@ function Painting(props) {
     <Link className="card" to={`/paintings/${shorthand}`}>
       <div>
         <img src={url} style={{ width: '100%' }} />
-        <div className="container">
+        {/* <div className="container">
           <h4>
             <b>{artist}</b>
           </h4>
-        </div>
+        </div> */}
       </div>
     </Link>
   );
