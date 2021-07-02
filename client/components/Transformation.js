@@ -67,7 +67,9 @@ class Transformation extends React.Component {
       <div className="content">
         <div className="placard">
           <h1 className="artist">{painting.artist}</h1>
-          <h1 className="title">{painting.title}</h1>
+          <h1 className="title">
+            {painting.title}, {painting.year}
+          </h1>
         </div>
         <div className="sourceImages">
           <img className="paintingImg" src={painting.url} />
