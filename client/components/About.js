@@ -12,7 +12,10 @@ class About extends React.Component {
             {/* <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=LinkedIn&logoColor=white" /> */}
             <h4>
               Developed by{' '}
-              <a href="https://www.linkedin.com/in/lauraevandyke/">
+              <a
+                href="https://www.linkedin.com/in/lauraevandyke/"
+                target="_blank"
+              >
                 Laura Van Dyke
               </a>
             </h4>
