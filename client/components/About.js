@@ -10,8 +10,12 @@ class About extends React.Component {
         <div>
           <div className="header">
             {/* <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=LinkedIn&logoColor=white" /> */}
-            <h4>Developed by Laura Van Dyke</h4>
-            <a href="https://www.linkedin.com/in/lauraevandyke/">LinkedIn</a>
+            <h4>
+              Developed by{' '}
+              <a href="https://www.linkedin.com/in/lauraevandyke/">
+                Laura Van Dyke
+              </a>
+            </h4>
           </div>
           <h3 className="aboutBody">
             Art Imitator uses machine learning models to incorporate artistic
