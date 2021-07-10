@@ -37,8 +37,8 @@ class About extends React.Component {
         <div>
           <h3 className="aboutBody">
             It takes 3-4 hours to train each model using a Tesla V100 computer
-            and not every model produces satisfying results. Check out some of
-            the rejected models below.
+            and not every model produces satisfying results. Try out some of the
+            rejected models below.
           </h3>
           <div className="about-container">
             {Object.keys(badPaintings).map((painting) => {
