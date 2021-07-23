@@ -1,6 +1,6 @@
 body {
   font-family: sans-serif;
-  color: grey;
+  color: #cccccc;
   background-color: black;
 }
 
@@ -17,6 +17,23 @@ nav a {
   display: inline-block;
   margin: 1em;
   color: deepskyblue;
+  font-size: 1.5em;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h3.homeDescr {
+  margin-bottom: 0px;
+}
+
+h3.homeText {
+  margin-top: 0.5em;
 }
 
 form div {
@@ -41,7 +58,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 1%;
-  border: double grey;
+  border: double #cccccc;
 }
 
 .content {
@@ -63,7 +80,7 @@ header {
 }
 
 .userInput {
-  border: dashed grey;
+  border: dashed #cccccc;
   max-width: 500px;
   width: 500px;
   display: flex;
@@ -148,7 +165,7 @@ header {
 
 .homeDescr {
   margin-left: 21.44px;
-  font-weight: normal;
+  font-weight: lighter;
 }
 
 /* painting cards for Paintings */
