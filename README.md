@@ -8,8 +8,6 @@ This project uses machine learning models to incorporate artistic elements into 
 
 # Getting Started
 
-Visit https://art-imitator.herokuapp.com/ to check out the live project.
-
 To run the project on your local machine:
 
 Clone this repository `git clone https://github.com/lauravandyke/art-imitator.git`
